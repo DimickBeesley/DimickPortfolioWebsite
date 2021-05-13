@@ -1,0 +1,55 @@
+@{
+    ViewData["Title"] = "SpectrumAnalyser";
+}
+
+<head>
+    <!--
+        use a statement like this to link css and html
+        
+        <link rel="stylesheet" href="app.cs" type="text/css" /> 
+    -->
+</head>
+
+<style>
+    .img {
+        display: block;
+        width: 85%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    .caption {
+        text-align: center;
+    }    
+
+    p {
+        padding: 10px;
+    }
+</style>
+
+<body>
+    <h1>Spectrum Analyser</h1>
+    <p>
+        Here's a python program using pyqtgraph to display the computer's playback 
+        audio data in waveform and a frequency spectrum in realtime. pyqtgraph is used
+        over Matplot lib is for more optimized fps in display. It works as a nice proof
+        of concept and I will be using similar methods for future projects like an LED
+        light display that is responsive to audioplay back or microphone.
+    </p>
+    <p class="caption">
+        Below is visualized waveform of a whistle captured by microphone
+    </p>
+    <img src="~/images/SpectrumAnalyser.png" class="img" alt="Spectrum Analyser Img"/>
+    <p class="bot">
+        Since this is nice visual insight into data in realtime, I might clean up the
+        display. Something I want to tweak is the frequency spectrum, that has progressivly 
+        more data points you get closer to the right of the graph which seems to create
+        problematic noise. Taking the mean of every point within consistent numbers of pixels
+        on the graph the visual noise might be alleviated.
+    </p>
+</body>
